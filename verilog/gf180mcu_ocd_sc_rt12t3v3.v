@@ -22,25 +22,6 @@ assign Y = A & B;
 endmodule
 
 //--------------------------------------------------
-// 3-input AND
-//--------------------------------------------------
-
-module gf180mcu_ocd_sc_rt12t3v3__and3_1 (
-	input VDD,
-	input VSS,
-
-	input A,
-	input B,
-	input C,
-	output Y
-);
-
-assign Y = A & B & C;
-	
-
-endmodule
-
-//--------------------------------------------------
 // Antenna diode
 //--------------------------------------------------
 
@@ -555,6 +536,24 @@ module gf180mcu_ocd_sc_rt12t3v3__nand2_1 (
 );
 
 assign Y = !(A & B);
+
+endmodule
+
+//--------------------------------------------------
+// 3-input NAND
+//--------------------------------------------------
+
+module gf180mcu_ocd_sc_rt12t3v3__nand2_1 (
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+	assign Y = !(A & B & C);
 
 endmodule
 
